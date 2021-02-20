@@ -30,7 +30,7 @@ export default class BookRequestScreen extends Component{
   addRequest =(bookName,reasonToRequest)=>{
     var userId = this.state.userId
     var randomRequestId = this.createUniqueId()
-    db.collection('requested_books').add({
+    db.collection('bookRequest').add({
         "user_id": userId,
         "book_name":bookName,
         "reason_to_request":reasonToRequest,
